@@ -1,0 +1,11 @@
+name: benchmark
+http:
+  host: localhost:8081
+  sharedConnections: 5
+usersPerSec: 1
+maxSessions: 100
+duration: 5s
+scenario:
+  - test:
+      - httpRequest:
+          GET: /products
