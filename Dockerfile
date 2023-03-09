@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-alpine3.14
+FROM openjdk:17-jdk
 WORKDIR /app
 COPY target/*.jar /app/myapp.jar
 EXPOSE 9010
