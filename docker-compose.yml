@@ -2,8 +2,7 @@ version: '3.8'
 services:
   db:
     container_name: db
-    build:
-      context: ./database
+    image: postgres:14.4-alpine
     restart: always
     environment:
       - POSTGRES_USER=postgres
@@ -18,8 +17,6 @@ services:
     container_name: backend
     build:
       context: .
-    expose:
-      - 8081
     ports:
       - "8081:8081"
       - "9010:9010"
