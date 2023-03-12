@@ -20,4 +20,4 @@ docker run --rm -it -v C:\Users\BartoszKuziemski\IdeaProjects\master-thesis-spri
 
 
 ./wrk -t100 -c1000 -d60s -R2000 --u_latency http://localhost:8081/products
-./wrk -s tests/test.lua -d60s -R2000 --u_latency http://localhost:8081
+./wrk -t20 -c100 -d60s -R100 -s post_product.lua --latency http://localhost:8081/products
