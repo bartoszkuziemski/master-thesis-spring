@@ -7,7 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ConditionEnum {
     NEW("NEW"),
-    USER("USED"),
+    USED("USED"),
     NEW_WITHOUT_TAG("NEW_WITHOUT_TAG"),
     NEW_WITH_DEFECT("NEW_WITH_DEFECT");
 

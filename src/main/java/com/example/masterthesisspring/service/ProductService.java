@@ -32,4 +32,12 @@ public class ProductService {
         return "Product deleted";
     }
 
+    public Long getProductsNumber() {
+        return productRepository.count();
+    }
+
+    public void deleteAllProducts() {
+        productRepository.deleteAll();
+    }
+
 }

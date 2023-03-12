@@ -32,4 +32,15 @@ public class ProductController {
         return new ResponseEntity<>(productService.deleteProduct(id), HttpStatus.OK);
     }
 
+    @GetMapping("/number")
+    public ResponseEntity<Long> getProductsNumber() {
+        return new ResponseEntity<>(productService.getProductsNumber(), HttpStatus.OK);
+    }
+
+    @DeleteMapping("/all")
+    public ResponseEntity<Void> deleteAllProducts() {
+        productService.deleteAllProducts();
+        return ResponseEntity.ok().build();
+    }
+
 }

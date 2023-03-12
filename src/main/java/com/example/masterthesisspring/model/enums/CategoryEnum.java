@@ -7,7 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum CategoryEnum {
     ELECTRONICS("ELECTRONICS"),
-    CAR("FASHION"),
+    FASHION("FASHION"),
     HOME_AND_GARDEN("HOME_AND_GARDEN"),
     FOOD("FOOD"),
     BEAUTY("BEAUTY"),

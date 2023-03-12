@@ -62,12 +62,3 @@ request = function()
 	local headers = { ["Content-Type"] = "application/json;charset=UTF-8" }
 	return wrk.format("POST", url_path, headers, cjson.encode(val))
 end
-
-done = function(summary, latency, requests)
-    io.write("--------------POST ZIPCODE----------------\n")
-    for _, p in pairs({ 50, 75, 90, 99, 99.999 }) do
-        n = latency:percentile(p)
-        io.write(string.format("%g%%,%d\n", p, n))
-    end
-	io.write("------------------------------------------\n\n")
-end
